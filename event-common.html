@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-common</title>
+</head>
+
+<body>
+    <p id="clicking-method"></p>
+    <!-- 2 -->
+    <input id="input-field" type="text">
+    <button id="update-name">update</button>
+    <!-- 1 -->
+    <button onclick=" handleJustFunctionClick()">
+        just function
+    </button>
+
+    <button id="handle-event">
+        direct and event listener
+    </button>
+
+
+    <script>
+        function handleJustFunctionClick() {
+            const p = document.getElementById('clicking-method');
+            p.innerText = 'set by using function'
+        }
+
+        // direct button
+        document.getElementById('handle-event').addEventListener('click', function () {
+            const p = document.getElementById('clicking-method');
+            p.innerText = 'set by direct and event listener'
+        })
+
+        // 2  direct intput button
+        document.getElementById('update-name').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field')
+
+            const p = document.getElementById('clicking-method');
+            // putting the input value in the paragraph
+            p.innerText = inputField.value;
+            // empty the box after clicking  and it will show in the paragraph
+            inputField.value = ''
+
+        })
+
+
+    </script>
+</body>
+
+</html>

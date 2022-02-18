@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+</head>
+
+<body>
+    <section id="section">
+        <h2>Event Babble vai</h2>
+        <ul id="list-container">
+            <li class="item">Lorem ipsum dolor sit amet.</li>
+            <li id="second-item" class="item">Assumenda nesciunt distinctio praesentium fuga!</li>
+            <li class="item">Facere optio neque maxime perspiciatis.</li>
+            <li class="item">Quos cumque consectetur quisquam impedit?</li>
+            <li class="item">Iste iusto odit aperiam eius.</li>
+            <li class="item">Deleniti quas quisquam sit? Libero.</li>
+        </ul>
+    </section>
+
+
+
+
+    <script>
+        // for second li
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('second 1 item clicked')
+            // event.stopPropagation();
+            event.stopImmediatePropagation();  // it will stop similars with uppers
+        })
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('second 2 item clicked')
+            event.stopPropagation();
+        })
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('second 3 item clicked')
+            event.stopPropagation();
+        })
+        // for ul
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log(' ul clicked')
+        })
+        // for section
+        document.getElementById('section').addEventListener('click', function () {
+            console.log(' section clicked')
+        })
+    </script>
+</body>
+
+</html>

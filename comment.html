@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment</title>
+</head>
+
+<body>
+    <h2> add your comment please!</h2>
+
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quas deserunt eligendi aut inventore
+            quisquam aliquid omnis laborum magnam libero ab, dolor a, eveniet reprehenderit veritatis quo maxime
+            repudiandae asperiores.</p>
+
+        <p>Cumque, impedit sed quaerat velit at, necessitatibus dicta suscipit quos excepturi voluptatibus placeat sequi
+            officia delectus nemo ratione laborum esse? Consequatur error fugiat nesciunt ipsum accusantium ullam eaque
+            eius corporis!</p>
+
+
+    </div>
+
+    <div>
+
+
+        <textarea name="" id="new-comment" cols="70" rows="10"></textarea>
+        <br>
+        <button id="submit-comment">post</button>
+    </div>
+
+
+    <!-- <script>
+
+        // 1 make button clickable with event listener using function
+        document.getElementById('submit-comment').addEventListener('click', function () {
+            // console.log('clicked')
+            // 2 adding textarea connecting with id
+            const commentBox = document.getElementById('new-comment');
+            // const userComment = commentbox.value
+
+            // 3 creating text from comment
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value
+
+            // 4 append it as paragraph
+
+            const commentContainer = document.getElementById('comment-container');
+
+            commentContainer.appendChild(newComment);
+            commentBox.value = ''
+
+
+        })
+
+
+    </script> -->
+
+
+    <!-- <script>
+        document.getElementById('submit-comment').addEventListener('click', function () {
+            const commentBox = document.getElementById('new-comment');
+            const userComment = commentBox.value
+
+            const newComment = document.createElement('p');
+            newComment.innerText = userComment
+
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.appendChild(newComment);
+            commentBox.value = ''
+        })
+    </script> -->
+
+
+    <script>
+        document.getElementById('submit-comment').addEventListener('click', function () {
+            const areaComment = document.getElementById('new-comment');
+            const userComment = areaComment.value;
+
+            const paragraph = document.createElement('p');
+            paragraph.innerText = userComment;
+
+            const showParagraph = document.getElementById('comment-container');
+            showParagraph.appendChild(paragraph);
+
+            areaComment.value = ''
+        })
+    </script>
+</body>
+
+</html>

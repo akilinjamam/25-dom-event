@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this is a event</title>
+</head>
+
+<body>
+    <!-- click over on h1 in the browser and see result in the console.log -->
+    <h1 onclick="console.log('h1 is clicked') ">event niye clickbaji</h1>
+
+    <!-- if you click in the h1 , it will show you a pop up  -->
+    <h1 onclick="alert('daga baji koris na besi, ekdom khuli uraiya dimu koilam') ">event niye clickbaji</h1>
+
+    <button onclick="console.log(7) ">click me</button>
+    <!-- change the color when clicked on button -->
+    <button onclick="document.body.style.backgroundColor = 'yellow' ">click me</button>
+
+    <!-- 1. making this button clickable(red) with setting function calling through parameter internally and externally -->
+    <button onclick="makingRed()">click me with function</button>
+
+    <!-- 2. making this button clickable(blue) with setting an id and link it with function -->
+    <button id="make-it-blue">click me with function</button>
+
+    <!-- 3. making button clickable(green) with setting and id and link with annonymous function -->
+    <button id="make-it-green">click me with function</button>
+
+    <!-- 4. making button clickable(golden rod) with setting and id and link with event listener function -->
+    <button id="make-it-goldenrod">click me with function</button>
+
+    <!-- 5. making button clickable(hot pink) with setting and id and link with function under event listener bracket  -->
+    <button id="make-it-hotpink">click me with function</button>
+
+
+    <!-- 6. making button clickable(light blue) with setting an id and link with function under event listener bracket  -->
+    <button id="make-it-lightblue">click me with function</button>
+
+
+
+
+
+    <!--1. you can set js externally.  -->
+    <script src="js/function.js">
+
+    </script>
+
+
+
+    <!--2. this script is for blue button -->
+    <!-- <script>
+        const blueButton = document.getElementById('make-it-blue')
+
+        // just set the name of the function
+
+        blueButton.onclick = makingBlue
+
+        function makingBlue() {
+            document.body.style.backgroundColor = 'blue'
+        }
+    </script> -->
+
+
+
+
+    <!-- 1. you can set js file internally -->
+    <!-- <script>
+        function makingRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+    </script> -->
+
+    <!--3. this is for making button green with annonymous function  -->
+    <!-- <script>
+        const greenButton = document.getElementById('make-it-green');
+
+        greenButton.onclick = function () {
+            document.body.style.backgroundColor = 'green';
+        }
+    </script> -->
+
+    <!-- 4. thid is for button golden rod using event listener in the function -->
+    <!-- <script>
+        const buttonGoldenRod = document.getElementById('make-it-goldenrod');
+
+        buttonGoldenRod.addEventListener('click', makingGolden);
+
+        function makingGolden() {
+            document.body.style.backgroundColor = 'goldenRod';
+        }
+    </script> -->
+
+    <!-- 5. this is for button hot pink using function under event listener-->
+    <!-- <script>
+        const buttonPink = document.getElementById('make-it-hotpink');
+        buttonPink.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'HotPink'
+        })
+    </script> -->
+
+    <!-- 6. this is for button light blue using function under event listener in direct way-->
+
+    <!-- <script>
+        const lightblueButton = document.getElementById('make-it-lightblue').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'lightblue';
+        })
+    </script> -->
+
+    <!-- <script>
+        const lightBlue = document.getElementById('make-it-lightblue').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'lightblue'
+        })
+    </script> -->
+
+
+</body>
+
+</html>
